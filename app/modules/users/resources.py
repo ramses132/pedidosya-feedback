@@ -62,7 +62,7 @@ user_model = api.model(
     })
 
 user_model_response = api.model(
-    'user', {
+    'user_response', {
         'created_at':
         fields.DateTime(required=False, description='The User created date'),
         'modified_at':

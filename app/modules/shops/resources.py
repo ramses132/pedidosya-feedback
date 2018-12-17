@@ -22,7 +22,7 @@ shop_model = api.model(
     })
 
 shop_model_response = api.model(
-    'shop', {
+    'shop_response', {
         'created_at':
         fields.DateTime(required=False, description='The shop created date'),
         'modified_at':

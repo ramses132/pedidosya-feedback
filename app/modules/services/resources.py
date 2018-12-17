@@ -47,7 +47,7 @@ service_model = api.model(
     })
 
 service_model_response = api.model(
-    'shop', {
+    'service_response', {
         'created_at':
         fields.DateTime(required=False, description='The shop created date'),
         'modified_at':
