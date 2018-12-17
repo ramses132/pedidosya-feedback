@@ -95,7 +95,6 @@ class HerokuConfig(ProductionConfig):
         file_handler = StreamHandler()
         file_handler.setLevel(logging.INFO)
         app.logger.addHandler(file_handler)
-        
 
 
 class DockerConfig(ProductionConfig):
