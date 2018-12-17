@@ -39,7 +39,19 @@ yugo@arkananetwork:~$ touch .env
 
 yugo@arkananetwork:~$ vim .env ```
 
-in the .env file add POSTGRES Docker and the FLASK_APP and FLASK_CONFIG  Enviroment Variables then...
+in the .env file add POSTGRES Docker and the FLASK_APP and FLASK_CONFIG  Enviroment Variables
+```
+POSTGRES_USER=feedback
+POSTGRES_PASSWORD=feedback
+POSTGRES_DB=feedback
+POSTGRES_HOST=postgres
+DATABASE_URL=postgres://feedback:feedback@postgres:5432/feedback
+FLASK_CONFIG=docker
+FLASK_APP=feedback.py
+
+```
+ then...
+ 
 ``` console
 
 yugo@arkananetwork:~$ docker-compose up --build
