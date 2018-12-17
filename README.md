@@ -22,6 +22,8 @@ yugo@arkananetwork:~$ virtualenv -ppython3 venv && source ./venv/bin/activate
 
 yugo@arkananetwork:~$ pip install requirements.txt
 
+yugo@arkananetwork:~$ flask db upgrade
+
 yugo@arkananetwork:~$ flask run
 
 yugo@arkananetwork:~$ echo "Enjoy! : - )"
@@ -51,7 +53,7 @@ FLASK_APP=feedback.py
 
 ```
  then...
- 
+
 ``` console
 
 yugo@arkananetwork:~$ docker-compose up --build
