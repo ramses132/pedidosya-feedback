@@ -1,70 +1,76 @@
 import logging
-from flask_restplus import Resource, Namespace, fields, reqparse
+
+from flask_restplus import Namespace, Resource, fields, reqparse
 
 log = logging.getLogger(__name__)
-api = Namespace(
-    'users', description="Reviews API v1 (Not Implemented)")
+api = Namespace('users', description="Reviews API v1 (Not Implemented)")
 
-permission_model = api.model('permission', {
-    "name": fields.String(required=True, description="Permission name")
-})
+permission_model = api.model(
+    'permission',
+    {"name": fields.String(required=True, description="Permission name")})
 
-group_model = api.model('group', {
-    "name": fields.String(required=True, description="Group name")
-})
-
+group_model = api.model(
+    'group', {"name": fields.String(required=True, description="Group name")})
 
 user_model = api.model(
     'user', {
         "username":
-        fields.String(
-            required=False, description="the user username"),
+        fields.String(required=False, description="the user username"),
         "password_hash":
-        fields.String(required=False, description="The user password secret hash"),
+        fields.String(
+            required=False, description="The user password secret hash"),
         "access_token":
         fields.String(
-            required=False, description="The user actual JWT hash access Token"),
+            required=False,
+            description="The user actual JWT hash access Token"),
         "refresh_token":
         fields.String(
-            required=False, description="The user actual JWT hash Refresh Token"),
+            required=False,
+            description="The user actual JWT hash Refresh Token"),
         "email":
-        fields.String(
-            required=False, description="The user email address"),
+        fields.String(required=False, description="The user email address"),
         "first_name":
-        fields.String(
-            required=False, description="The user first name"),
+        fields.String(required=False, description="The user first name"),
         "last_name":
-        fields.String(
-            required=False, description="The user last name"),
+        fields.String(required=False, description="The user last name"),
         "is_superuser":
         fields.Boolean(
-            required=False, description="The user is superuser flag to allow all privileges"),
+            required=False,
+            description="The user is superuser flag to allow all privileges"),
         "is_staff":
         fields.Boolean(
-            required=False, description="The user is staff flag to allow enter to future api html interface"),
+            required=False,
+            description=
+            "The user is staff flag to allow enter to future api html interface"
+        ),
         "is_active":
         fields.Boolean(
-            required=False, description="The User is active flag to allow operations"),
+            required=False,
+            description="The User is active flag to allow operations"),
         "last_login":
         fields.DateTime(
             required=False, description="The user last login date"),
         "date_joined":
         fields.DateTime(
             required=False, description="The User microservice joined date"),
-        "groups": fields.Nested(group_model, as_list=True, allow_null=True),
-        "permissions": fields.Nested(permission_model, as_list=True, allow_null=True),
-        "shop": fields.String(description="shop identifier", required=False)
+        "groups":
+        fields.Nested(group_model, as_list=True, allow_null=True),
+        "permissions":
+        fields.Nested(permission_model, as_list=True, allow_null=True),
+        "shop":
+        fields.String(description="shop identifier", required=False)
     })
-
 
 user_model_response = api.model(
     'user', {
-         'created_at':
+        'created_at':
         fields.DateTime(required=False, description='The User created date'),
         'modified_at':
         fields.DateTime(
             required=False, description='The User last modified date'),
-        "id": fields.Integer(readonly=True, description='The User unique identifier'),
+        "id":
+        fields.Integer(
+            readonly=True, description='The User unique identifier'),
         "username":
         fields.String(required=False, description="the user username"),
         "password_hash":

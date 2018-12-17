@@ -1,5 +1,6 @@
 import logging
-from flask_restplus import Resource, Namespace, fields, reqparse
+
+from flask_restplus import Namespace, Resource, fields, reqparse
 
 log = logging.getLogger(__name__)
 api = Namespace('shops', description="Shop Registry API v1 (Not Implemented)")
@@ -9,8 +10,7 @@ shop_model = api.model(
         "name":
         fields.String(required=False, description="the shop name"),
         "url":
-        fields.String(
-            required=False, description="The shop url"),
+        fields.String(required=False, description="The shop url"),
         "jwt_public_key":
         fields.String(
             required=False,
@@ -19,7 +19,7 @@ shop_model = api.model(
         fields.String(
             required=False,
             description="The shop JWT encrypt hash private key"),
-        })
+    })
 
 shop_model_response = api.model(
     'shop', {

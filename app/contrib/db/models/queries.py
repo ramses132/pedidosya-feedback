@@ -1,4 +1,5 @@
 from flask_sqlalchemy import BaseQuery
+
 from app import db
 
 

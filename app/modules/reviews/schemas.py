@@ -1,12 +1,15 @@
-from app import ma
-from .models import Review
-from marshmallow import fields, validate, validates_schema, ValidationError
 from flask_marshmallow.sqla import ModelSchema
+from marshmallow import ValidationError, fields, validate, validates_schema
+
+from app import ma
+
+from .models import Review
 
 
 class ReviewSchema(ModelSchema):
     score = fields.Integer(validate=validate.Range(min=1, max=5))
     id = fields.Integer(dump_only=True)
+
     class Meta:
         model = Review
 

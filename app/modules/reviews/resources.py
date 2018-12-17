@@ -1,11 +1,14 @@
 import logging
-from flask_restplus import Resource, Namespace, fields, reqparse, inputs, abort
+
+import sqlalchemy
+from flask_restplus import Namespace, Resource, abort, fields, inputs, reqparse
 from flask_restplus._http import HTTPStatus
+from marshmallow import ValidationError
+
+from app import db
+
 from . import schemas
 from .models import Review
-from app import db
-import sqlalchemy
-from marshmallow import ValidationError
 
 log = logging.getLogger(__name__)
 api = Namespace('reviews', description="reviews API v1")
@@ -239,10 +242,10 @@ class ReviewsDetail(Resource):
         """
         Delete Review instance
         """
-        schema  = self.schema_class()
+        schema = self.schema_class()
         instance = Review.query.get_or_404(id)
         try:
-            
+
             instance.deleted = True
             db.session.commit()
 
@@ -254,8 +257,6 @@ class ReviewsDetail(Resource):
                 code=HTTPStatus.CONFLICT, message='Failed to update review...')
 
         return schema.dump(instance), 204
-
-
 
     @api.doc('patch review')
     @api.response(409, 'message: <error>')

@@ -1,8 +1,10 @@
 import logging
-from flask_restplus import Resource, Namespace, fields, reqparse
+
+from flask_restplus import Namespace, Resource, fields, reqparse
 
 log = logging.getLogger(__name__)
-api = Namespace('services', description="Shop Registry API v1 (Not Implemented)")
+api = Namespace(
+    'services', description="Shop Registry API v1 (Not Implemented)")
 
 service_model = api.model(
     'service', {
@@ -20,36 +22,28 @@ service_model = api.model(
             description="The service JWT encrypt hash private key"),
         "headers":
         fields.String(
-            required=False,
-            description="The service request headers"),
+            required=False, description="The service request headers"),
         "request_body_schema":
         fields.String(
             required=False,
             description="The service request body structure schema"),
         "request_type":
         fields.String(
-            required=False,
-            description="The service request data type"),
+            required=False, description="The service request data type"),
         "response_body_schema":
         fields.String(
             required=False,
             description="The service response body structure schema"),
         "response_type":
         fields.String(
-            required=False,
-            description="The service response data type"),
+            required=False, description="The service response data type"),
         "method":
-        fields.String(
-            required=False,
-            description="service request method"),
+        fields.String(required=False, description="service request method"),
         "cookies":
         fields.String(
-            required=False,
-            description="the service request cookies"),
+            required=False, description="the service request cookies"),
         "verbose":
-        fields.String(
-            required=False,
-            description="Level logger verbose"),
+        fields.String(required=False, description="Level logger verbose"),
     })
 
 service_model_response = api.model(
@@ -190,7 +184,9 @@ class TasksList(Resource):
     """
         Async Task Celery Schedules (Not implented)
     """
-    @api.response(200, "list of tasks with cron and schedule (not implemented)")
+
+    @api.response(200,
+                  "list of tasks with cron and schedule (not implemented)")
     def get(self, *args):
         """
         List of Async Task with cron and schedules (Not Implemented)

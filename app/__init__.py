@@ -56,7 +56,6 @@ def create_app(config_name='default'):
     app.redis = Redis.from_url(app.config['REDIS_URL'])
     app.task_queue = rq.Queue('feedback-tasks', connection=app.redis)
 
-
     if not app.debug and not app.testing:
         if app.config['MAIL_SERVER']:
             auth = None
