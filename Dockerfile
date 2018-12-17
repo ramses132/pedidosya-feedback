@@ -5,8 +5,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apt-get update && \
-    apt-get install libpq postgresql-dev gcc python3-dev musl-dev build-base
+RUN apt-get update
 
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip && \
