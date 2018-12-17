@@ -16,7 +16,7 @@ COPY migrations ./
 COPY feedback.py ./
 COPY config.py ./ 
 
-COPY ./boot.sh ./entrypoint.sh
+COPY ./entrypoint.sh ./entrypoint.sh
 RUN chmod a+x ./entrypoint.sh
 
 EXPOSE 5000
