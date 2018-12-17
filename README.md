@@ -42,4 +42,9 @@ yugo@arkananetwork:~$ echo "[Contained Enjoy : - )]"
 
 ```
 
+## Extras
+
+I make a simple scrapper for swearwords because we will need a word black list 
+to clean the reviews in the future it's make in [bonobo ETL](https://www.bonobo-project.org/ "Bonobo Project Official Site") and [Bs4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/ "BeautifulSoup Official Doc Site") 
+
 Thanks for read! 
