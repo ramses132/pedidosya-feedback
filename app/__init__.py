@@ -29,13 +29,12 @@ api = Api(
     version='1.0',
     title="Feedback-Microservice API",
     description=("""
-    Welcome to **feedback** this is a simple **CRUD** Flask-app Rest-Plus API 
+    Welcome to Feedback this is a simple CRUD Flask-app Rest-Plus API 
     to complete a personal challenge, it's writted in python 
-    [Flask framework](http://flask.pocoo.org/ "Flask's official website") 
-    with Flask Rest-Plus because it's cool for microservices. 
-    to data storage I am using 
-    [*postgreSQL*](https://www.postgresql.org/ "postgreSQL official website") 
-    it's robust and great. 
+    Flask framework with Flask Rest-Plus because it's cool for microservices. 
+    to data storage I am using PostgreSQL DB it's robust and great.
+    In future I will implement JWT Authentication Token and Crypto 
+    Argon for password and other cool technologies 
     Thanks for read! 
     """))
 
