@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apk update && \
+RUN apt-get update && \
     apk add libpq postgresql-dev gcc python3-dev musl-dev build-base
 
 COPY requirements.txt requirements.txt
