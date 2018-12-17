@@ -28,13 +28,19 @@ yugo@arkananetwork:~$ echo "Enjoy! : - )"
 ```
 
 ### Docker version
-
-install [Docker CE](https://docs.docker.com/install/ "Docker official install guide") and [Docker Compose](https://docs.docker.com/compose/install/#install-compose "Docker Compose official install guide") (remember add ur user to docker group and restart session)
+install [Docker CE](https://docs.docker.com/install/ "Docker official install guide") and [Docker Compose](https://docs.docker.com/compose/install/#install-compose "Docker Compose official install guide") (remember add ur user to docker group and restart session) and execute this
 
 ``` console
 yugo@arkananetwork:~$ git clone https://github.com/ramses132/pedidosya-feedback.git <folder>
 
 yugo@arkananetwork:~$ cd <folder>
+
+yugo@arkananetwork:~$ touch .env
+
+yugo@arkananetwork:~$ vim .env ```
+
+in the .env file add POSTGRES Docker and the FLASK_APP and FLASK_CONFIG  Enviroment Variables then...
+``` console
 
 yugo@arkananetwork:~$ docker-compose up --build
 

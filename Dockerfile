@@ -13,7 +13,7 @@ RUN pip install --upgrade pip && \
 
 COPY app ./
 COPY migrations ./
-COPY search.py ./
+COPY feedback.py ./
 COPY config.py ./ 
 
 COPY ./boot.sh ./entrypoint.sh
