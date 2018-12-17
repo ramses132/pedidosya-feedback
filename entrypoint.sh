@@ -1,5 +1,4 @@
 #!/bin/sh
-#!/bin/sh
 
 set -e
 
@@ -29,6 +28,7 @@ done
 echo Postgres connection success, continuing...
 
 flask db upgrade
+
 exec "$@"
 
 
