@@ -1,0 +1,19 @@
+./feedback/
+├── app
+│   ├── __init__.py
+│   └── modules
+│       ├── api
+│       │   └── __init__.py
+│       ├── __init__.py
+│       ├── reviews
+│       └── services
+│           └── __init__.py
+├── config.py
+├── etl_scrapping_swearwords.py
+├── feedback.py
+├── LICENCE
+├── README.md
+├── swearwords.txt
+├── tests
+│   └── __init__.py
+└── tree.txt

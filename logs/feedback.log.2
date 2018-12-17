@@ -1,0 +1,113 @@
+2018-12-15 18:16:29,050 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:17:10,189 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:19:08,908 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:20:39,080 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:21:08,013 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:21:27,579 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:21:54,478 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:22:45,149 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:23:46,744 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:24:01,913 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:25:09,019 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:25:29,611 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:26:17,563 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:26:42,988 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:27:18,222 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:29:31,591 ERROR: Exception on /api/v1/reviews/ [GET] [in /srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/srv/pedidosya/feedback/app/modules/reviews/resources.py", line 35, in get
+    return schema.dump(Review.all())
+AttributeError: type object 'Review' has no attribute 'all'
+2018-12-15 18:31:10,632 ERROR: Exception on /api/v1/reviews/ [GET] [in /srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/srv/pedidosya/feedback/app/modules/reviews/resources.py", line 35, in get
+    return schema.dump(Review.query)
+AttributeError: type object 'Review' has no attribute 'all'
+2018-12-15 18:31:33,948 ERROR: Exception on /api/v1/reviews/ [GET] [in /srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/srv/pedidosya/feedback/app/modules/reviews/resources.py", line 35, in get
+    return schema.dump(Review.query.all())
+AttributeError: type object 'Review' has no attribute 'all'
+2018-12-15 18:31:42,613 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:31:45,492 ERROR: Exception on /api/v1/reviews/ [GET] [in /srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: review
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/srv/pedidosya/feedback/app/modules/reviews/resources.py", line 35, in get
+    return schema.dump(Review.query.all())
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2843, in all
+    return list(self)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2995, in __iter__
+    return self._execute_and_instances(context)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/srv/pedidosya/feedback/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: review [SQL: 'SELECT review.created_at AS review_created_at, review.modified_at AS review_modified_at, review.id AS review_id, review.user AS review_user, review.shop AS review_shop, review.purchase AS review_purchase, review.score AS review_score, review.description AS review_description \nFROM review'] (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-12-15 18:32:15,036 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:32:23,727 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:32:56,086 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
+2018-12-15 18:33:11,449 INFO: Feedback is up! [in /srv/pedidosya/feedback/app/__init__.py:95]
