@@ -31,6 +31,7 @@ Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 fs==2.1.2
 graphviz==0.8.4
+gunicorn==19.9.0
 identify==1.1.7
 idna==2.8
 importlib-metadata==0.7
