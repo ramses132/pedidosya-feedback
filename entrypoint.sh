@@ -28,8 +28,6 @@ done
 
 echo Postgres connection success, continuing...
 
-#fab migrate
-#fab load
 flask db upgrade
 exec "$@"
 
