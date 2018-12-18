@@ -67,10 +67,9 @@ class ReviewsList(Resource):
 
     def filter_query(self, query):
         def build_filter(arg, lookup, value, operator=sqlalchemy.or_):
-            print('>>>>', value)
+            
             column = getattr(self.model_class, arg, None)
             if not column:
-                print('KHE')
                 raise abort(
                     code=HTTPStatus.BAD_REQUEST,
                     message='invalid filter argument: %s' % arg)
@@ -96,11 +95,9 @@ class ReviewsList(Resource):
                 parser.add_argument(arg, type=input_type)
 
         args = parser.parse_args()
-        print('>>>>>', args)
 
         for __arg, __value in args.items():
             __arg, *__lookups = __arg.split('__')
-            print('>>>>>value1', __value)
             if __lookups:
                 __filter = (build_filter(__arg, __lookup, __value)
                             for __lookup in __lookups)
@@ -110,7 +107,6 @@ class ReviewsList(Resource):
                     __lookups,
                     __value,
                 )
-            print('>>>>>filters', list(__filter))
             try:
                 query = query.filter(*__filter)
             except Exception as err:

@@ -17,7 +17,6 @@ class ReviewSchema(ModelSchema):
     def validate_reviews(self, data):
         purchase = data['purchase']
         pk = data['id'] if data['id'] else None
-        print('>>>', pk)
         query = Review.query
         if pk:
             query = query.filter(Review.id != pk)
